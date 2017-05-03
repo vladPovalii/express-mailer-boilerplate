@@ -1,0 +1,1 @@
+This project is a simple boilerpate for api-server with express-mailer functionality
