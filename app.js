@@ -40,17 +40,16 @@ app.use(function(req, res, next) {
 });
 
 app.post('/contactus', (req, res) => {
-	data = JSON.stringify(req.body);
-	console.log(data);
-	/*
+	var data = req.body;
+	//console.log(req.body);
 	app.mailer.send('email', {
 		to: 'vladpovalii@gmail.com',//config.mailer.to, // REQUIRED. This can be a comma delimited string just like a normal email to field.  
 		subject: 'Новая заявка на сайте', // REQUIRED. 
 		name: data.name,
 		email: data.email,
-		surname: data.phone,
-		phone: data.place,
-		message: data.denomination
+		surname: data.surname,
+		phone: data.phone,
+		message: data.message
 	}, function (err) {
 		if (err) {
 			// handle error 
@@ -62,7 +61,7 @@ app.post('/contactus', (req, res) => {
 			return;
 		}
 		res.json({success: true});
-	});*/
+	});
 });
 
 module.exports = app;
